@@ -13,24 +13,20 @@
   <div class="background"></div>
 
   <!-- Navbar-->
-  <!-- Animated Navbar-->
-  <div class="nav">
-    <div class="container">
-      <div class="btn">Home</div>
-      <div class="btn" onclick="location.href='Jobs.html'">Jobs</div>
-      <div class="btn" onclick="location.href='Work.html'">Work</div>
-      <div class="btn" onclick="location.href='collabration.html'">Collaboration</div>
-      <div class="btn" onclick="location.href='Tools.html'">Tools</div>
-      <div class="btn" onclick="location.href='profile.html'">Profile</div>
-      <div class="btn" onclick="location.href='support.html'">Support</div>
-      <div class="btn" onclick="location.href='Login.html'">Login </div>
-      <svg class="outline" overflow="visible" width="800" height="60" viewBox="0 0 800 60"
-        xmlns="http://www.w3.org/2000/svg">
-        <rect class="rect" pathLength="100" x="0" y="0" width="800" height="60" fill="transparent" stroke-width="5">
-        </rect>
-      </svg>
-    </div>
-  </div>
+   <nav class="navbar">
+    <div class="logo">Flexora</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="Jobs.html">Jobs</a></li>
+      <li><a href="Work.html">Work</a></li>
+      <li><a href="collabration.html">Collaboration</a></li>
+      <li><a href="Tools.html">Tools</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="support.html">Support</a></li>
+    </ul>
+    <a href="Login.html" class="login-btn">Login</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
   <!-- Video Section -->
   <div class="videoWrapper">
     <video autoplay muted loop controls>
@@ -223,7 +219,12 @@
       &copy; 2025 Flexora. All rights reserved.
     </div>
   </footer>
-  
+  <script>
+     function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
